@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>size_6_rank_1 - Pattern Overview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fafafa;
+        }
+
+        .header {
+            background: white;
+            padding: 20px;
+            border-bottom: 2px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #111827;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .tab {
+            padding: 16px 24px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+            font-weight: 500;
+            color: #6b7280;
+            background: none;
+            border: none;
+            font-size: 15px;
+        }
+
+        .tab:hover {
+            background: #f9fafb;
+            color: #111827;
+        }
+
+        .tab.active {
+            color: #2563eb;
+            border-bottom-color: #2563eb;
+        }
+
+        /* Tab content */
+        .tab-content {
+            display: none;
+            padding: 24px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Representative pattern section */
+        .representative-section {
+            max-width: 100%;
+            margin: 0 auto;
+            height: calc(100vh - 140px);
+        }
+
+        .representative-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: white;
+        }
+
+        /* Instances grid */
+        .instances-section {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .stats {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .stat-value {
+            color: #111827;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .instance-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.2s;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .instance-card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            border-color: #2563eb;
+        }
+
+        .instance-card a {
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            display: block;
+        }
+
+        .instance-number {
+            color: #9ca3af;
+            font-size: 13px;
+            margin-top: 8px;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* No representative message */
+        .no-representative {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            color: #92400e;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>size_6_rank_1</h1>
+        <div class="subtitle">Pattern Discovery and Analysis</div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="openTab(event, 'representative-tab')">
+            📊 Representative Pattern
+        </button>
+        <button class="tab" onclick="openTab(event, 'instances-tab')">
+            📁 All Instances (69)
+        </button>
+    </div>
+
+    <div id="representative-tab" class="tab-content active">
+        <div class="representative-section">
+
+            <iframe src="representative.html" class="representative-frame"></iframe>
+
+        </div>
+    </div>
+
+    <div id="instances-tab" class="tab-content">
+        <div class="instances-section">
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-label">Total Instances</div>
+                    <div class="stat-value">69</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Pattern Type</div>
+                    <div class="stat-value">6</div>
+                </div>
+            </div>
+
+            <div class="grid">
+
+                <div class="instance-card">
+                    <a href="instance_0001.html" target="_blank">Instance 1</a>
+                    <div class="instance-number">#0001</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0002.html" target="_blank">Instance 2</a>
+                    <div class="instance-number">#0002</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0003.html" target="_blank">Instance 3</a>
+                    <div class="instance-number">#0003</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0004.html" target="_blank">Instance 4</a>
+                    <div class="instance-number">#0004</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0005.html" target="_blank">Instance 5</a>
+                    <div class="instance-number">#0005</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0006.html" target="_blank">Instance 6</a>
+                    <div class="instance-number">#0006</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0007.html" target="_blank">Instance 7</a>
+                    <div class="instance-number">#0007</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0008.html" target="_blank">Instance 8</a>
+                    <div class="instance-number">#0008</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0009.html" target="_blank">Instance 9</a>
+                    <div class="instance-number">#0009</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0010.html" target="_blank">Instance 10</a>
+                    <div class="instance-number">#0010</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0011.html" target="_blank">Instance 11</a>
+                    <div class="instance-number">#0011</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0012.html" target="_blank">Instance 12</a>
+                    <div class="instance-number">#0012</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0013.html" target="_blank">Instance 13</a>
+                    <div class="instance-number">#0013</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0014.html" target="_blank">Instance 14</a>
+                    <div class="instance-number">#0014</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0015.html" target="_blank">Instance 15</a>
+                    <div class="instance-number">#0015</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0016.html" target="_blank">Instance 16</a>
+                    <div class="instance-number">#0016</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0017.html" target="_blank">Instance 17</a>
+                    <div class="instance-number">#0017</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0018.html" target="_blank">Instance 18</a>
+                    <div class="instance-number">#0018</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0019.html" target="_blank">Instance 19</a>
+                    <div class="instance-number">#0019</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0020.html" target="_blank">Instance 20</a>
+                    <div class="instance-number">#0020</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0021.html" target="_blank">Instance 21</a>
+                    <div class="instance-number">#0021</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0022.html" target="_blank">Instance 22</a>
+                    <div class="instance-number">#0022</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0023.html" target="_blank">Instance 23</a>
+                    <div class="instance-number">#0023</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0024.html" target="_blank">Instance 24</a>
+                    <div class="instance-number">#0024</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0025.html" target="_blank">Instance 25</a>
+                    <div class="instance-number">#0025</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0026.html" target="_blank">Instance 26</a>
+                    <div class="instance-number">#0026</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0027.html" target="_blank">Instance 27</a>
+                    <div class="instance-number">#0027</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0028.html" target="_blank">Instance 28</a>
+                    <div class="instance-number">#0028</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0029.html" target="_blank">Instance 29</a>
+                    <div class="instance-number">#0029</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0030.html" target="_blank">Instance 30</a>
+                    <div class="instance-number">#0030</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0031.html" target="_blank">Instance 31</a>
+                    <div class="instance-number">#0031</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0032.html" target="_blank">Instance 32</a>
+                    <div class="instance-number">#0032</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0033.html" target="_blank">Instance 33</a>
+                    <div class="instance-number">#0033</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0034.html" target="_blank">Instance 34</a>
+                    <div class="instance-number">#0034</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0035.html" target="_blank">Instance 35</a>
+                    <div class="instance-number">#0035</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0036.html" target="_blank">Instance 36</a>
+                    <div class="instance-number">#0036</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0037.html" target="_blank">Instance 37</a>
+                    <div class="instance-number">#0037</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0038.html" target="_blank">Instance 38</a>
+                    <div class="instance-number">#0038</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0039.html" target="_blank">Instance 39</a>
+                    <div class="instance-number">#0039</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0040.html" target="_blank">Instance 40</a>
+                    <div class="instance-number">#0040</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0041.html" target="_blank">Instance 41</a>
+                    <div class="instance-number">#0041</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0042.html" target="_blank">Instance 42</a>
+                    <div class="instance-number">#0042</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0043.html" target="_blank">Instance 43</a>
+                    <div class="instance-number">#0043</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0044.html" target="_blank">Instance 44</a>
+                    <div class="instance-number">#0044</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0045.html" target="_blank">Instance 45</a>
+                    <div class="instance-number">#0045</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0046.html" target="_blank">Instance 46</a>
+                    <div class="instance-number">#0046</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0047.html" target="_blank">Instance 47</a>
+                    <div class="instance-number">#0047</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0048.html" target="_blank">Instance 48</a>
+                    <div class="instance-number">#0048</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0049.html" target="_blank">Instance 49</a>
+                    <div class="instance-number">#0049</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0050.html" target="_blank">Instance 50</a>
+                    <div class="instance-number">#0050</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0051.html" target="_blank">Instance 51</a>
+                    <div class="instance-number">#0051</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0052.html" target="_blank">Instance 52</a>
+                    <div class="instance-number">#0052</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0053.html" target="_blank">Instance 53</a>
+                    <div class="instance-number">#0053</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0054.html" target="_blank">Instance 54</a>
+                    <div class="instance-number">#0054</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0055.html" target="_blank">Instance 55</a>
+                    <div class="instance-number">#0055</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0056.html" target="_blank">Instance 56</a>
+                    <div class="instance-number">#0056</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0057.html" target="_blank">Instance 57</a>
+                    <div class="instance-number">#0057</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0058.html" target="_blank">Instance 58</a>
+                    <div class="instance-number">#0058</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0059.html" target="_blank">Instance 59</a>
+                    <div class="instance-number">#0059</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0060.html" target="_blank">Instance 60</a>
+                    <div class="instance-number">#0060</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0061.html" target="_blank">Instance 61</a>
+                    <div class="instance-number">#0061</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0062.html" target="_blank">Instance 62</a>
+                    <div class="instance-number">#0062</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0063.html" target="_blank">Instance 63</a>
+                    <div class="instance-number">#0063</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0064.html" target="_blank">Instance 64</a>
+                    <div class="instance-number">#0064</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0065.html" target="_blank">Instance 65</a>
+                    <div class="instance-number">#0065</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0066.html" target="_blank">Instance 66</a>
+                    <div class="instance-number">#0066</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0067.html" target="_blank">Instance 67</a>
+                    <div class="instance-number">#0067</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0068.html" target="_blank">Instance 68</a>
+                    <div class="instance-number">#0068</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0069.html" target="_blank">Instance 69</a>
+                    <div class="instance-number">#0069</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Hide all tab contents
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+
+            // Remove active class from all tabs
+            const tabs = document.getElementsByClassName('tab');
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+
+            // Show the selected tab content and mark tab as active
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>size_4_rank_3 - Pattern Overview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fafafa;
+        }
+
+        .header {
+            background: white;
+            padding: 20px;
+            border-bottom: 2px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #111827;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .tab {
+            padding: 16px 24px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+            font-weight: 500;
+            color: #6b7280;
+            background: none;
+            border: none;
+            font-size: 15px;
+        }
+
+        .tab:hover {
+            background: #f9fafb;
+            color: #111827;
+        }
+
+        .tab.active {
+            color: #2563eb;
+            border-bottom-color: #2563eb;
+        }
+
+        /* Tab content */
+        .tab-content {
+            display: none;
+            padding: 24px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Representative pattern section */
+        .representative-section {
+            max-width: 100%;
+            margin: 0 auto;
+            height: calc(100vh - 140px);
+        }
+
+        .representative-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: white;
+        }
+
+        /* Instances grid */
+        .instances-section {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .stats {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .stat-value {
+            color: #111827;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .instance-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.2s;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .instance-card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            border-color: #2563eb;
+        }
+
+        .instance-card a {
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+            display: block;
+        }
+
+        .instance-number {
+            color: #9ca3af;
+            font-size: 13px;
+            margin-top: 8px;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* No representative message */
+        .no-representative {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            color: #92400e;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>size_4_rank_3</h1>
+        <div class="subtitle">Pattern Discovery and Analysis</div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="openTab(event, 'representative-tab')">
+            📊 Representative Pattern
+        </button>
+        <button class="tab" onclick="openTab(event, 'instances-tab')">
+            📁 All Instances (4)
+        </button>
+    </div>
+
+    <div id="representative-tab" class="tab-content active">
+        <div class="representative-section">
+
+            <iframe src="representative.html" class="representative-frame"></iframe>
+
+        </div>
+    </div>
+
+    <div id="instances-tab" class="tab-content">
+        <div class="instances-section">
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-label">Total Instances</div>
+                    <div class="stat-value">4</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Pattern Type</div>
+                    <div class="stat-value">4</div>
+                </div>
+            </div>
+
+            <div class="grid">
+
+                <div class="instance-card">
+                    <a href="instance_0001.html" target="_blank">Instance 1</a>
+                    <div class="instance-number">#0001</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0002.html" target="_blank">Instance 2</a>
+                    <div class="instance-number">#0002</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0003.html" target="_blank">Instance 3</a>
+                    <div class="instance-number">#0003</div>
+                </div>
+
+                <div class="instance-card">
+                    <a href="instance_0004.html" target="_blank">Instance 4</a>
+                    <div class="instance-number">#0004</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Hide all tab contents
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+
+            // Remove active class from all tabs
+            const tabs = document.getElementsByClassName('tab');
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+
+            // Show the selected tab content and mark tab as active
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
